@@ -7,4 +7,12 @@ class Lion implements Animal {
     {
         echo 'ライオンがなきました' . PHP_EOL;
     }
+    public function eatFood(string $food): void
+    {
+        if ($food === '肉') {
+            echo '肉を食べました' . PHP_EOL;
+        } else {
+            throw new Exception('ライオンは肉しか食べません');
+        }
+    }
 }

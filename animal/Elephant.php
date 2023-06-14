@@ -5,4 +5,12 @@ class Elephant implements Animal {
     {
         echo 'ぞうがなきました' . PHP_EOL;
     }
+    public function eatFood(string $food): void
+    {
+        if ($food === '草') {
+            echo $food . 'を食べました' . PHP_EOL;
+        } else {
+            throw new Exception('ぞうは草しか食べません');
+        }
+    }
 }

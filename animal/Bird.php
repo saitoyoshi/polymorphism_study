@@ -5,4 +5,11 @@ class Bird implements Animal {
     {
         echo '鳥がなきました' . PHP_EOL;
     }
+    public function eatFood(string $food): void {
+        if ($food === '豆') {
+            echo $food . 'をたべました' . PHP_EOL;
+        } else {
+            throw new Exception('鳥は豆しか食べません');
+        }
+    }
 }
