@@ -12,7 +12,7 @@ class Lion implements Animal {
         if ($food === '肉') {
             echo '肉を食べました' . PHP_EOL;
         } else {
-            throw new Exception('ライオンは肉しか食べません');
+            throw new Exception("ライオンは{$food}を食べません");
         }
     }
 }

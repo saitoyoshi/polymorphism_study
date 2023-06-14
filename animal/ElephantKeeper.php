@@ -9,10 +9,11 @@ class ElephantKeeper implements Zookeeper {
     }
     public function feedAnimal(Animal $animal, string $food): void
     {
+        $animalClass = get_class($animal);
         if ($animal instanceof Elephant) {
             $animal->eatFood($food);
         } else {
-            throw new Exception('ぞうしか世話できません');
+            throw new Exception("{$animalClass}を世話できません");
         }
     }
 }

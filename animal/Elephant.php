@@ -10,7 +10,7 @@ class Elephant implements Animal {
         if ($food === '草') {
             echo $food . 'を食べました' . PHP_EOL;
         } else {
-            throw new Exception('ぞうは草しか食べません');
+            throw new Exception("{$food}を食べません");
         }
     }
 }

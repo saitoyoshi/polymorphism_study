@@ -9,7 +9,7 @@ class Bird implements Animal {
         if ($food === '豆') {
             echo $food . 'をたべました' . PHP_EOL;
         } else {
-            throw new Exception('鳥は豆しか食べません');
+            throw new Exception("鳥は{$food}を食べません");
         }
     }
 }
